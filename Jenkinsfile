@@ -13,7 +13,11 @@ pipeline {
                 git url: 'https://github.com/Rushabh-Pansuriya/Practice.git', branch: 'main'
             }
         }
-
+        stage('Test Docker Access') {
+            steps {
+                sh 'docker ps'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
