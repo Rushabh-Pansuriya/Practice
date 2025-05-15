@@ -17,14 +17,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image...'
-                sh 'docker build -t Dockerfile .'
+                sh 'docker build -t rushabh46/flask-app .'
             }
         }
 
         stage('Test Application') {
             steps {
                 echo 'Running application tests...'
-                sh 'docker run --rm Dockerfile python -m unittest discover -s tests'
+                sh 'docker run --rm rushabh46/flask-app python -m unittest discover -s tests'
             }
         }
 
