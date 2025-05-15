@@ -1,7 +1,7 @@
 # tests/test_app.py
 
 import unittest
-from app import app  # Make sure 'app' is your Flask app object
+from practice1 import app  # Make sure 'app' is your Flask app object
 
 class BasicTestCase(unittest.TestCase):
     def setUp(self):
