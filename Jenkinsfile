@@ -33,7 +33,7 @@ pipeline {
                 echo 'Pushing Docker image to Docker Hub...'
                 withCredentials([usernamePassword(credentialsId: "dockerhub", usernameVariable: 'rushabh46', passwordVariable: 'DOCKER_PASS')]) {
                     sh '''
-                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                        echo "$DOCKER_PASS" | docker login -u "rushabh46" --password-stdin
                         docker push rushabh46/flask-app
                     '''
                 }
